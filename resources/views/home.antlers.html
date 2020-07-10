@@ -1,0 +1,12 @@
+<div class="max-w-2xl mx-auto my-32">
+    {{ collection:articles group_by_date="M Y" as="entries" }}
+      {{ date_groups }}
+          <h3>{{ date_group }}</h3>
+          <ul>
+              {{ entries }}
+                  <li>{{ title }}</li>
+              {{ /entries }}
+          </ul>
+      {{ /date_groups }}
+    {{ /collection:articles }}
+</div>
